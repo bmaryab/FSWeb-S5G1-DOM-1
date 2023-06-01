@@ -43,3 +43,48 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+const navLinks = document.querySelectorAll('header nav a');
+navLinks[0].textContent = siteContent.nav["nav-item-1"];
+navLinks[1].textContent = siteContent.nav["nav-item-2"];
+navLinks[2].textContent = siteContent.nav["nav-item-3"];
+navLinks[3].textContent = siteContent.nav["nav-item-4"];
+navLinks[4].textContent = siteContent.nav["nav-item-5"];
+navLinks[5].textContent = siteContent.nav["nav-item-6"];
+
+const h1Element = document.querySelector('.cta h1');
+h1Element.textContent = "Bu DOM Mükemmel";
+
+const ctaButton = document.querySelector('.cta button');
+ctaButton.textContent = "Başlayın";
+
+const h4Elements = document.querySelectorAll('.text-content h4');
+h4Elements[0].textContent = "Özellikler";
+h4Elements[1].textContent = "Hakkında";
+h4Elements[2].textContent = "Servisler";
+h4Elements[3].textContent = "Ürünler";
+h4Elements[4].textContent = "Vizyon";
+
+const pElements = document.querySelectorAll('.text-content p');
+pElements[0].textContent = siteContent["ana-içerik"]["özellikler-içerik"];
+pElements[1].textContent = siteContent["ana-içerik"]["hakkımızda-içerik"];
+pElements[2].textContent = siteContent["ana-içerik"]["servisler-içeriği"];
+pElements[3].textContent = siteContent["ana-içerik"]["ürünler-içeriği"];
+pElements[4].textContent = siteContent["ana-içerik"]["vizyon-içeriği"];
+
+const h4Contact = document.querySelector('.contact h4');
+h4Contact.textContent = siteContent.iletisim["iletişim-h4"];
+
+const pContact = document.querySelectorAll('.contact p');
+pContact[0].textContent = siteContent.iletisim.adres;
+pContact[1].textContent = siteContent.iletisim.telefon;
+pContact[2].textContent = siteContent.iletisim.email;
+
+const copy = document.querySelector('footer a');
+copy.textContent = siteContent.footer.copyright;
+
+document.querySelector('#logo-img').setAttribute('src', "http://localhost:9000/img/logo.png");
+document.querySelector('#cta-img').setAttribute('src', "http://localhost:9000/img/cta.png");
+document.querySelector('#middle-img').setAttribute('src', "http://localhost:9000/img/accent.png");
+
+navLinks.forEach(x=>x.classList.add('italic'));
+copy.classList.toggle('bold');
